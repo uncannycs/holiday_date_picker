@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_order_line_delivery_date" model="ir.ui.view">
+        <field name="name">sale.order.form.delivery.date</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Add in LIST view -->
+            <xpath expr="//field[@name='order_line']//list//field[@name='discount']" position="after">
+                <field name="x_delivery_date" string="Delivery Date" optional="show"/>
+            </xpath>
+
+            <!-- Add in FORM popup -->
+            <xpath expr="//field[@name='order_line']//form//field[@name='price_unit']" position="after">
+                <field name="x_delivery_date" string="Delivery Date"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
