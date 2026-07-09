@@ -32,8 +32,6 @@ class HolidayFieldConfig(models.Model):
 
     @api.model
     def get_holiday_data(self):
-        """ Fetch holiday fields and holiday dates dynamically. """
-        # Get all configured fields grouped by model
         configured_fields = self.sudo().search([])
         holiday_fields = {}
         for config in configured_fields:
@@ -43,7 +41,6 @@ class HolidayFieldConfig(models.Model):
                 holiday_fields[model_name] = []
             holiday_fields[model_name].append(field_name)
 
-        # Get all holiday dates globally
         holidays_records = self.env['holiday.date'].sudo().search([])
         holidays = [record.date.strftime('%Y-%m-%d') for record in holidays_records]
 

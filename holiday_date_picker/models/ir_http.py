@@ -6,7 +6,6 @@ class Http(models.AbstractModel):
     def session_info(self):
         result = super().session_info()
         
-        # Get all configured fields grouped by model
         configured_fields = self.env['holiday.field.config'].sudo().search([])
         holiday_fields = {}
         for config in configured_fields:
@@ -16,7 +15,6 @@ class Http(models.AbstractModel):
                 holiday_fields[model_name] = []
             holiday_fields[model_name].append(field_name)
 
-        # Get all holiday dates globally
         holidays_records = self.env['holiday.date'].sudo().search([])
         holidays = [record.date.strftime('%Y-%m-%d') for record in holidays_records]
 

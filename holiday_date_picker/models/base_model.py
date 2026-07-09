@@ -96,7 +96,6 @@ class Base(models.AbstractModel):
                     vals_to_write[field_name] = self._format_date_like(val, new_date)
 
             if vals_to_write:
-                # Use with_context to prevent infinite recursion
                 record.with_context(skip_holiday_check=True).write(vals_to_write)
 
     def _parse_date(self, val):
