@@ -8,13 +8,14 @@
 #
 ##############################################################################
 {
-    'name': 'Holiday Date Picker',
+    'name': 'Holiday Date Picker Ucs',
     'version': '18.0.1.0.3',
     "author": "Uncanny Consulting Services LLP",
     "website": "https://uncannycs.com",
+    "maintainer": "Uncanny Consulting Services LLP",
     'category': 'Sales',
     'summary': 'Add promise date on sale order, restrict holidays selection',
-    'depends': ['sale', 'web'],
+    'depends': ['sale_management', 'web'],
     'data': [
         'security/ir.model.access.csv',
         'views/holiday_date_views.xml',
@@ -27,5 +28,5 @@
     },
     'installable': True,
     'application': False,
-    'license': 'LGPL-3',
+    "license": "Other proprietary",
 }
