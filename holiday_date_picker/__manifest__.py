@@ -29,4 +29,7 @@
     'installable': True,
     'application': False,
     "license": "Other proprietary",
+    "images": ['static/description/banner.gif'],
+    "price": 20,
+    "currency": "USD"
 }
