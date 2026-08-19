@@ -8,7 +8,7 @@
 #
 ##############################################################################
 {
-    'name': 'Holiday Date Picker Ucs',
+    'name': 'Holiday Date Picker | Odoo Holiday Date Selector | Holiday Date Validation | Working Day Date Picker | Holiday Date Management',
     'version': '19.0.1.0.3',
     "author": "Uncanny Consulting Services LLP",
     "website": "https://uncannycs.com",
